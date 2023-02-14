@@ -4,5 +4,5 @@ ver=$(curl -s https://api.github.com/repos/zzzgydi/clash-verge/releases/latest |
 sed -i "s/pkgver=.*/pkgver=${ver}/" PKGBUILD
 sudo -u builder  updpkgsums
 
-rm clash-verge_${ver}_amd64.deb
+rm clash-verge-${ver}-x86_64.deb
 cd -
