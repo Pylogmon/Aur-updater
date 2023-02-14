@@ -1,0 +1,34 @@
+name: auto-aur-update
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: "0 */2 * * *"
+  
+
+jobs:
+  UpdatePkg:
+    strategy:
+      fail-fast: false
+      matrix:
+        Packages:
+        - clash-verge-bin
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./build-aur-action
+        with:
+          pkgname: ${{ matrix.Packages }}
+          pkgdir: ${{ matrix.Packages }}
+
+      - name: Publish AUR package
+        uses: KSXGitHub/github-actions-deploy-aur@v2.2.5
+        with:
+          pkgname: ${{ matrix.Packages }}
+          pkgbuild: ${{ matrix.Packages }}/PKGBUILD
+          commit_username: ${{ secrets.AUR_USERNAME }}
+          commit_email: ${{ secrets.AUR_EMAIL }}
+          ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+          commit_message: Update AUR package
+          ssh_keyscan_types: rsa,dsa,ecdsa,ed25519
+          allow_empty_commits: false
