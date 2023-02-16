@@ -13,6 +13,7 @@ jobs:
         Packages:
         - clash-verge-bin
         - earth-wallpaper-bin
+        - wallhaven-desktop-bin
 
     runs-on: ubuntu-latest
     steps:
