@@ -12,6 +12,7 @@ jobs:
       matrix:
         Packages:
         - clash-verge-bin
+        - earth-wallpaper-bin
 
     runs-on: ubuntu-latest
     steps:
