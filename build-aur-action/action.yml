@@ -9,10 +9,17 @@ inputs:
   pkgname:
     description: 'AUR package / repository name'
     required: true
+  sourcename:
+    description: ''
+    required: true
+  token:
+    description: ''
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.pkgdir }}
     - ${{ inputs.pkgname }}
-    - ${{ inputs.soucename }}
+    - ${{ inputs.sourcename }}
+    - ${{ input.token }}
