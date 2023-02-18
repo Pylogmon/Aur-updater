@@ -9,9 +9,6 @@ inputs:
   pkgname:
     description: 'AUR package / repository name'
     required: true
-  sourcename:
-    description: ''
-    required: true
   token:
     description: ''
     required: true
@@ -21,5 +18,4 @@ runs:
   args:
     - ${{ inputs.pkgdir }}
     - ${{ inputs.pkgname }}
-    - ${{ inputs.sourcename }}
     - ${{ input.token }}
