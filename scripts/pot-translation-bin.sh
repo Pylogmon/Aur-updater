@@ -4,5 +4,5 @@ ver=$(curl -H "Authorization: Bearer ${INPUT_TOKEN}" -s https://api.github.com/r
 sed -i "s/pkgver=.*/pkgver=${ver}/" PKGBUILD
 sudo -u builder  updpkgsums
 
-rm pot-${ver}.tar.gz
+rm pot-${ver}-x86_64.tar.gz
 cd -

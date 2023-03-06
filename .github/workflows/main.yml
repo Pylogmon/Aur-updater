@@ -15,6 +15,7 @@ jobs:
         - earth-wallpaper-bin
         - wallhaven-desktop-bin
         - pot-translation
+        - pot-translation-bin
 
     runs-on: ubuntu-latest
     steps:
