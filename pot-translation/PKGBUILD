@@ -8,6 +8,8 @@ pkgdesc="一个跨平台的划词翻译软件"
 arch=('x86_64')
 url="https://github.com/Pylogmon/pot"
 license=('GPL3')
+provides=("$pkgname")
+conflicts=("$pkgname-bin" "$pkgname-git")
 depends=('libappindicator-gtk3' 'webkit2gtk' 'gtk3' 'libayatana-appindicator' 'xsel')
 makedepends=('nodejs' 'pnpm' 'rust')
 
