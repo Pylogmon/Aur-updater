@@ -11,7 +11,7 @@ license=('GPL3')
 provides=("$pkgname")
 conflicts=("$pkgname-bin" "$pkgname-git")
 depends=('webkit2gtk' 'gtk3' 'libayatana-appindicator' 'xdotool' 'libxcb' 'libxrandr')
-makedepends=('nodejs' 'pnpm' 'rust' 'git')
+makedepends=('nodejs' 'pnpm' 'rust' 'git' 'dbus')
 
 source=("${reponame}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 
