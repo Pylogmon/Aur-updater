@@ -5,13 +5,13 @@ reponame=pot-desktop
 pkgver=0.0.1
 pkgrel=1
 pkgdesc="一个跨平台的划词翻译软件"
-arch=('any')
+arch=('x86_64' 'i686' 'aarch64' 'armv7h' 'riscv64')
 url="https://github.com/pot-app/pot-desktop"
 license=('GPL3')
 provides=("$pkgname")
 conflicts=("$pkgname-bin" "$pkgname-git")
 depends=('webkit2gtk' 'gtk3' 'libayatana-appindicator' 'xdotool' 'libxcb' 'libxrandr' 'tesseract' 'tessdata')
-makedepends=('nodejs' 'pnpm' 'rust' 'git' 'dbus')
+makedepends=('nodejs' 'pnpm' 'rust' 'dbus')
 
 source=("${reponame}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 
