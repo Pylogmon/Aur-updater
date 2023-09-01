@@ -30,6 +30,6 @@ build(){
     pnpm tauri build -b deb
 }
 package() {
-    cd $srcdir/${reponame}-${pkgver}
-    tar xpf src-tauri/target/release/bundle/deb/pot_${pkgver}_amd64/data.tar.gz -C ${pkgdir}
+    cd $srcdir/${reponame}-${_pkgver}
+    tar xpf src-tauri/target/release/bundle/deb/pot_${_pkgver}_amd64/data.tar.gz -C ${pkgdir}
 }
