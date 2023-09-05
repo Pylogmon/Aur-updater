@@ -2,8 +2,8 @@
 
 pkgname=pot-translation
 reponame=pot-desktop
-_pkgver=2.0.0-beta.0
-pkgver=2.0.0.beta.0
+_pkgver=2.0.0
+pkgver=2.0.0
 pkgrel=1
 pkgdesc="一个跨平台的划词翻译软件"
 arch=('x86_64' 'i686' 'aarch64' 'armv7h' 'riscv64')
@@ -31,4 +31,5 @@ build(){
 package() {
     cd $srcdir/${reponame}-${_pkgver}
     tar xpf src-tauri/target/release/bundle/deb/pot_${_pkgver}_amd64/data.tar.gz -C ${pkgdir}
+    chown -R root:root ${pkgdir}
 }
