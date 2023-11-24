@@ -12,6 +12,7 @@ jobs:
       matrix:
         Packages:
         - clash-verge-bin
+        - clash-verge-rev-bin
         - earth-wallpaper-bin
         - wallhaven-desktop-bin
         - pot-translation
