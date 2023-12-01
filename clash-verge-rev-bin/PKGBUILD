@@ -3,10 +3,10 @@
 pkgname=clash-verge-rev-bin
 _pkgname=clash-verge-rev
 pkgver=1.4.0
-pkgrel=0
+pkgrel=1
 pkgdesc="Clash Meta GUI based on tauri."
 arch=('x86_64')
-url="https://github.com/wonfen/clash-verge-rev"
+url="https://github.com/clash-verge-rev/clash-verge-rev"
 license=('GPL3')
 depends=('webkit2gtk' 'gtk3' 'libayatana-appindicator')
 conflicts=("$_pkgname" "$_pkgname-git" "clash-verge" "clash-verge-bin" "clash-nyanpasu" "clash-nyanpasu-bin" "clash-nyanpasu-git" "clash-meta")
