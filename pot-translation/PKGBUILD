@@ -11,7 +11,7 @@ license=('GPL3')
 provides=("$pkgname")
 conflicts=("$pkgname-bin" "$pkgname-git")
 depends=('webkit2gtk' 'gtk3' 'libayatana-appindicator' 'xdotool' 'libxcb' 'libxrandr' 'tesseract' 'tessdata')
-makedepends=('fnm' 'rust' 'dbus')
+makedepends=('nodejs' 'pnpm' 'rust' 'dbus')
 
 source=("${reponame}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
 
@@ -20,13 +20,11 @@ sha512sums=('8fcc9bdfcb79ac6ea5f67be134bc37f14f63c946390ef31b156d666a9044f46ea8e
 prepare(){
     cd $srcdir/${reponame}-${pkgver}
     sed -i "s/\"version\".*/\"version\": \"$pkgver\"/g" src-tauri/tauri.conf.json
-    eval "$(fnm env)" && fnm install && fnm use
-    npm install pnpm -g
+    pnpm install
 }
 
 build(){
     cd $srcdir/${reponame}-${pkgver}
-    pnpm install
     pnpm tauri build -b deb
 }
 
