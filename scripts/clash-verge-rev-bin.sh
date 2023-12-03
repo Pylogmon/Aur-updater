@@ -4,5 +4,4 @@ ver=$(curl -H "Authorization: Bearer ${INPUT_TOKEN}" -s https://api.github.com/r
 sed -i "s/pkgver=.*/pkgver=${ver}/" PKGBUILD
 sudo -u builder  updpkgsums
 
-rm clash-verge-rev-${ver}-x86_64.deb
 cd -
