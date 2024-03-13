@@ -13,6 +13,7 @@ jobs:
         Packages:
         - clash-verge-bin
         - clash-verge-rev-bin
+        - clash-verge-rev-alpha-bin
         - earth-wallpaper-bin
         - wallhaven-desktop-bin
         - pot-translation
