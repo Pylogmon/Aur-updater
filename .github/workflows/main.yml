@@ -18,6 +18,7 @@ jobs:
         - wallhaven-desktop-bin
         - pot-translation
         - pot-translation-bin
+        - botgem-electron
 
     runs-on: ubuntu-latest
     steps:
