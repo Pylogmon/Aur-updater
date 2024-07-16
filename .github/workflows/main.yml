@@ -2,8 +2,7 @@ name: auto-aur-update
 on:
   workflow_dispatch:
   schedule:
-  - cron: "0 */12 * * *"
-  
+    - cron: "0 */12 * * *"
 
 jobs:
   UpdatePkg:
@@ -11,12 +10,12 @@ jobs:
       fail-fast: false
       matrix:
         Packages:
-        - clash-verge-bin
-        - clash-verge-rev-bin
-        - clash-verge-rev-alpha-bin
-        - pot-translation
-        - pot-translation-bin
-        - botgem-electron
+          - clash-verge-rev
+          - clash-verge-rev-bin
+          - clash-verge-rev-alpha-bin
+          - pot-translation
+          - pot-translation-bin
+          - botgem-electron
 
     runs-on: ubuntu-latest
     steps:
