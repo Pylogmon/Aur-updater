@@ -10,12 +10,8 @@ jobs:
       fail-fast: false
       matrix:
         Packages:
-          - clash-verge-rev
-          - clash-verge-rev-bin
-          - clash-verge-rev-alpha-bin
           - pot-translation
           - pot-translation-bin
-          - botgem-electron
 
     runs-on: ubuntu-latest
     steps:
